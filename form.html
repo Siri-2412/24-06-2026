@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TechPortal</div>
+
+        <div class="auth-buttons">
+            <button onclick="showForm('loginForm')">Login</button>
+            <button onclick="showForm('signupForm')">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+
+            <ul>
+                <li>📊 Dashboard</li>
+                <li>👤 Profile</li>
+                <li>📁 Projects</li>
+                <li>📅 Events</li>
+                <li>⚙ Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <div class="hero">
+                <h1>Welcome to TechPortal</h1>
+                <p>
+                    Manage projects, connect with teams, and stay updated
+                    with the latest activities.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Latest News</h3>
+                    <p>
+                        New internship opportunities are available for students.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Upcoming Events</h3>
+                    <p>
+                        Hackathon registrations open this week.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Features</h3>
+                    <p>
+                        Access dashboards, reports, analytics and resources.
+                    </p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="popup-form">
+        <div class="form-box">
+            <span class="close" onclick="closeForm('loginForm')">&times;</span>
+            <h2>Login</h2>
+
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <button>Login</button>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupForm" class="popup-form">
+        <div class="form-box">
+            <span class="close" onclick="closeForm('signupForm')">&times;</span>
+            <h2>Create Account</h2>
+
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <button>Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        function showForm(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeForm(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
